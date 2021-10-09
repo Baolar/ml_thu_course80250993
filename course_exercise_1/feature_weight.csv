@@ -1,0 +1,108 @@
+﻿1,0.773378586867633,8,apache_3j_diagnosis,None,numeric,The APACHE III-J sub-diagnosis code which best describes the reason for the ICU admission
+2,0.0902280990483026,7,apache_2_diagnosis,None,numeric,The APACHE II diagnosis for the ICU admission
+3,0.04456079143725353,59,d1_platelets_max,10^9/L,numeric,The highest platelet count for the patient during the first 24 hours of their unit stay
+4,0.022396351470526706,19,map_apache,Millimetres of mercury,numeric,The mean arterial pressure measured during the first 24 hours which results in the highest APACHE III score
+5,0.01375989891144448,15,glucose_apache,mmol/L,numeric,The glucose concentration measured during the first 24 hours which results in the highest APACHE III score
+6,0.007389481819285177,49,h1_sysbp_max,Millimetres of mercury,numeric,"The patient's highest systolic blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+7,0.006994465357791994,35,d1_sysbp_max,Millimetres of mercury,numeric,"The patient's highest systolic blood pressure during the first 24 hours of their unit stay, either non-invasively or invasively measured"
+8,0.0054551629737498745,50,h1_sysbp_min,Millimetres of mercury,numeric,"The patient's lowest systolic blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+9,0.005034091708529334,55,d1_glucose_min,mmol/L,numeric,The lowest glucose concentration of the patient in their serum or plasma during the first 24 hours of their unit stay
+10,0.004840836934187081,36,d1_sysbp_min,Millimetres of mercury,numeric,"The patient's lowest systolic blood pressure during the first 24 hours of their unit stay, either non-invasively or invasively measured"
+11,0.004835850618372706,43,h1_mbp_max,Millimetres of mercury,numeric,"The patient's highest mean blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+12,0.0042510153870062625,30,d1_mbp_min,Millimetres of mercury,numeric,"The patient's lowest mean blood pressure during the first 24 hours of their unit stay, either non-invasively or invasively measured"
+13,0.004157612098969013,6,weight,kilograms,numeric,The weight (body mass) of the person on unit admission
+14,0.0040039411595179375,29,d1_mbp_max,Millimetres of mercury,numeric,"The patient's highest mean blood pressure during the first 24 hours of their unit stay, either non-invasively or invasively measured"
+15,0.0038855224794821304,44,h1_mbp_min,Millimetres of mercury,numeric,"The patient's lowest mean blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+16,0.0035474503272363046,26,d1_diasbp_min,Millimetres of mercury,numeric,"The patient's lowest diastolic blood pressure during the first 24 hours of their unit stay,  either non-invasively or invasively measured"
+17,0.0035297938823262496,16,heart_rate_apache,Beats per minute,numeric,The heart rate measured during the first 24 hours which results in the highest APACHE III score
+18,0.002619887816574549,40,h1_diasbp_min,Millimetres of mercury,numeric,"The patient's lowest diastolic blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+19,0.0021094067088455277,39,h1_diasbp_max,Millimetres of mercury,numeric,"The patient's highest diastolic blood pressure during the first hour of their unit stay, either non-invasively or invasively measured"
+20,0.0019325831648240492,24,wbc_apache,10^9/L,numeric,The white blood cell count measured during the first 24 hours which results in the highest APACHE III score
+21,0.001851703750830295,4,height,centimetres,numeric,The height of the person on unit admission
+22,0.001359534319113458,27,d1_heartrate_max,Beats per minute,numeric,The patient's highest heart rate during the first 24 hours of their unit stay
+23,0.0007307438714336521,2,bmi,kilograms/metres^2,numeric,The body mass index of the person on unit admission
+24,0.000590014625903799,62,d1_sodium_max,mmol/L,numeric,The highest sodium concentration for the patient in their serum or plasma during the first 24 hours of their unit stay
+25,0.0004565223986333541,3,elective_surgery,None,binary,Whether the patient was admitted to the hospital for an elective surgical operation
+26,0.00040721641572641755,48,h1_spo2_min,Percentage,numeric,The patient's lowest peripheral oxygen saturation during the first hour of their unit stay
+27,0.00040516426049592595,47,h1_spo2_max,Percentage,numeric,The patient's highest peripheral oxygen saturation during the first hour of their unit stay
+28,0.0003983879524239293,31,d1_resprate_max,Breaths per minute,numeric,The patient's highest respiratory rate during the first 24 hours of their unit stay
+29,0.00035902766770359764,5,pre_icu_los_days,Days,numeric,The length of stay of the patient between hospital admission and unit admission
+30,0.0002667750634493541,25,d1_diasbp_max,Millimetres of mercury,numeric,"The patient's highest diastolic blood pressure during the first 24 hours of their unit stay,  either non-invasively or invasively measured"
+31,0.00022059112435435585,21,sodium_apache,mmol/L,numeric,The sodium concentration measured during the first 24 hours which results in the highest APACHE III score
+32,0.0002032844395623924,37,d1_temp_max,Degrees Celsius,numeric,"The patient's highest core temperature during the first 24 hours of their unit stay, invasively measured"
+33,0.000195455466470582,34,d1_spo2_min,Percentage,numeric,The patient's lowest peripheral oxygen saturation during the first 24 hours of their unit stay
+34,0.0001670870518368356,22,temp_apache,Degrees Celsius,numeric,The temperature measured during the first 24 hours which results in the highest APACHE III score
+35,0.00014789706129256786,38,d1_temp_min,Degrees Celsius,numeric,The patient's lowest core temperature during the first 24 hours of their unit stay
+36,0.000139115177067438,13,gcs_motor_apache,None,integer,The motor component of the Glasgow Coma Scale measured during the first 24 hours which results in the highest APACHE III score
+37,0.00013600715190492272,33,d1_spo2_max,Percentage,numeric,The patient's highest peripheral oxygen saturation during the first 24 hours of their unit stay
+38,0.00011775587179563854,58,d1_hemaglobin_max,g/dL,numeric,The highest hemoglobin concentration for the patient during the first 24 hours of their unit stay
+39,0.00011710017504358604,60,d1_potassium_max,mmol/L,numeric,The highest potassium concentration for the patient in their serum or plasma during the first 24 hours of their unit stay
+40,0.00010350853566202347,89,apache_3j_bodysystem_Gastrointestinal,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+41,0.00010350853566202347,100,apache_2_bodysystem_Gastrointestinal,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+42,9.950134935375152e-05,108,apache_2_bodysystem_Undefined.diagnoses,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+43,8.010623689374284e-05,95,apache_3j_bodysystem_Neurological,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+44,8.010623689374283e-05,103,apache_2_bodysystem_Neurologic,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+45,7.664679083939382e-05,79,gender_M,None,binary,Whether the person belongs to this genotypical sex
+46,6.913658080760631e-05,87,icu_type_SICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+47,6.777258308745254e-05,104,apache_2_bodysystem_Renal.Genitourinary,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+48,6.226215403692508e-05,12,gcs_eyes_apache,None,integer,The eye opening component of the Glasgow Coma Scale measured during the first 24 hours which results in the highest APACHE III score
+49,5.795039623283658e-05,90,apache_3j_bodysystem_Genitourinary,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+50,5.394486476363478e-05,23,ventilated_apache,None,binary,"Whether the patient was invasively ventilated at the time of the highest scoring arterial blood gas using the oxygenation scoring algorithm, including any mode of positive pressure ventilation delivered through a circuit attached to an endo-tracheal tube or tracheostomy"
+51,4.897250794961848e-05,86,icu_type_Neuro.ICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+52,4.7910449846159326e-05,94,apache_3j_bodysystem_Musculoskeletal.Skin,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+53,4.71670157521309e-05,102,apache_2_bodysystem_Metabolic,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+54,4.716701575213084e-05,93,apache_3j_bodysystem_Metabolic,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+55,3.967979808240438e-05,18,intubated_apache,None,binary,Whether the patient was intubated at the time of the highest scoring arterial blood gas used in the oxygenation score
+56,3.928330056336557e-05,66,diabetes_mellitus,None,binary,"Whether the patient has been diagnosed with diabetes, either juvenile or adult onset, which requires medication."
+57,3.7921352237768275e-05,98,apache_3j_bodysystem_Trauma,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+58,3.792135223776827e-05,106,apache_2_bodysystem_Trauma,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+59,3.058580928091314e-05,51,h1_temp_max,Degrees Celsius,numeric,"The patient's highest core temperature during the first hour of their unit stay, invasively measured"
+60,2.1595742723349842e-05,82,icu_type_CTICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+61,1.896112440079128e-05,81,icu_type_CSICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+62,1.735938566634157e-05,61,d1_potassium_min,mmol/L,numeric,The lowest potassium concentration for the patient in their serum or plasma during the first 24 hours of their unit stay
+63,1.3045555472151846e-05,101,apache_2_bodysystem_Haematologic,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+64,1.3045555472151845e-05,92,apache_3j_bodysystem_Hematological,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+65,1.209837669999859e-05,107,apache_2_bodysystem_Undefined.Diagnoses,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+66,9.822186854615888e-06,91,apache_3j_bodysystem_Gynecological,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+67,6.689101321344034e-06,74,ethnicity_Caucasian,None,binary,Whether the person belongs to this national or cultural tradition
+68,5.020238606402551e-06,77,ethnicity_Other.Unknown,None,binary,Whether the person belongs to this national or cultural tradition
+69,4.708043808525981e-06,75,ethnicity_Hispanic,None,binary,Whether the person belongs to this national or cultural tradition
+70,8.675439856959691e-07,64,aids,None,binary,Whether the patient has a definitive diagnosis of acquired immune deficiency syndrome (AIDS) (not HIV positive alone)
+71,-7.159108558456414e-07,71,solid_tumor_with_metastasis,None,binary,Whether the patient has been diagnosed with any solid tumor carcinoma (including malignant melanoma) which has evidence of metastasis.
+72,-9.664768454764882e-07,70,lymphoma,None,binary,Whether the patient has been diagnosed with non-Hodgkin lymphoma.
+73,-2.844780165526118e-06,73,ethnicity_Asian,None,binary,Whether the person belongs to this national or cultural tradition
+74,-3.6282898805639454e-06,52,h1_temp_min,Degrees Celsius,numeric,The patient's lowest core temperature during the first hour of their unit stay
+75,-3.7707627239993015e-06,76,ethnicity_Native.American,None,binary,Whether the person belongs to this national or cultural tradition
+76,-7.431229946117556e-06,53,d1_calcium_max,mmol/L,numeric,The highest calcium concentration of the patient in their serum during the first 24 hours of their unit stay
+77,-9.801840846746655e-06,72,ethnicity_African.American,None,binary,Whether the person belongs to this national or cultural tradition
+78,-1.0390544560845665e-05,69,leukemia,None,binary,"Whether the patient has been diagnosed with acute or chronic myelogenous leukemia, acute or chronic lymphocytic leukemia, or multiple myeloma."
+79,-1.118415004593183e-05,9,arf_apache,None,binary,"Whether the patient had acute renal failure during the first 24 hours of their unit stay,  defined as a 24 hour urine output <410ml, creatinine >=133 micromol/L and no chronic dialysis"
+80,-1.2928102341427036e-05,68,immunosuppression,None,binary,"Whether the patient has their immune system suppressed within six months prior to ICU admission for any of the following reasons; radiation therapy, chemotherapy, use of non-cytotoxic immunosuppressive drugs, high dose steroids (at least 0.3 mg/kg/day of methylprednisolone or equivalent for at least 6 months)."
+81,-1.5803868526179623e-05,65,cirrhosis,None,binary,"Whether the patient has a history of heavy alcohol use with portal hypertension and varices, other causes of cirrhosis with evidence of portal hypertension and varices, or biopsy proven cirrhosis. This comorbidity does not apply to patients with a functioning liver transplant."
+82,-1.677983017121524e-05,14,gcs_verbal_apache,None,integer,The verbal component of the Glasgow Coma Scale measured during the first 24 hours which results in the highest APACHE III score
+83,-1.933899124653581e-05,67,hepatic_failure,None,binary,"Whether the patient has cirrhosis and additional complications including jaundice and ascites, upper GI bleeding, hepatic encephalopathy, or coma."
+84,-2.8585166846470394e-05,85,icu_type_Med.Surg.ICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+85,-3.286944831361899e-05,11,creatinine_apache,micromol/L,numeric,The creatinine concentration measured during the first 24 hours which results in the highest APACHE III score
+86,-3.7581868751903706e-05,80,icu_type_CCU.CTICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+87,-3.9975665091250834e-05,83,icu_type_Cardiac.ICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+88,-5.2523255191741137e-05,84,icu_type_MICU,None,binary,Whether the unit is capable of providing the person with this type of care 
+89,-7.664679083939385e-05,78,gender_F,None,binary,Whether the person belongs to this genotypical sex
+90,-7.824660721867288e-05,63,apache_4a_icu_death_prob,None,numeric,"The APACHE IVa probabilistic prediction of in ICU mortality for the patient which utilizes the APACHE III score and other covariates, including diagnosis"
+91,-8.922772027320498e-05,97,apache_3j_bodysystem_Sepsis,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+92,-0.00010449508751704383,54,d1_calcium_min,mmol/L,numeric,The lowest calcium concentration of the patient in their serum during the first 24 hours of their unit stay
+93,-0.00012170908187309932,96,apache_3j_bodysystem_Respiratory,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+94,-0.00012170908187309932,105,apache_2_bodysystem_Respiratory,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+95,-0.00016862455574330392,56,d1_hco3_max,mmol/L,numeric,The highest bicarbonate concentration for the patient in their serum or plasma during the first 24 hours of their unit stay
+96,-0.0001864949268051246,88,apache_3j_bodysystem_Cardiovascular,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE III
+97,-0.00033941192328592007,99,apache_2_bodysystem_Cardiovascular,None,binary,Whether the person belongs to this admission diagnosis group according to APACHE II
+98,-0.00037052997723551525,28,d1_heartrate_min,Beats per minute,numeric,The patient's lowest heart rate during the first 24 hours of their unit stay
+99,-0.00046083948484933017,17,hematocrit_apache,Fraction,numeric,The hematocrit measured during the first 24 hours which results in the highest APACHE III score
+100,-0.0005001568351444176,57,d1_hco3_min,None,numeric,The lowest bicarbonate concentration for the patient in their serum or plasma during the first 24 hours of their unit stay
+101,-0.0009399241234797961,41,h1_heartrate_max,Beats per minute,numeric,The patient's highest heart rate during the first hour of their unit stay
+102,-0.0012459281969196797,32,d1_resprate_min,Breaths per minute,numeric,The patient's lowest respiratory rate during the first 24 hours of their unit stay
+103,-0.0013941164850016794,20,resprate_apache,Breaths per minute,numeric,The respiratory rate measured during the first 24 hours which results in the highest APACHE III score
+104,-0.0014138238993733464,45,h1_resprate_max,Breaths per minute,numeric,The patient's highest respiratory rate during the first hour of their unit stay
+105,-0.0017998123215419535,42,h1_heartrate_min,Beats per minute,numeric,The patient's lowest heart rate during the first hour of their unit stay
+106,-0.001807145176215925,46,h1_resprate_min,Breaths per minute,numeric,The patient's lowest respiratory rate during the first hour of their unit stay
+107,-0.0034431515289893807,10,bun_apache,mmol/L,numeric,The blood urea nitrogen concentration measured during the first 24 hours which results in the highest APACHE III score
+108,-0.0035653657513163095,1,age,Years,numeric,The age of the patient on unit admission
