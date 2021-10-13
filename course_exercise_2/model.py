@@ -40,6 +40,26 @@ class Sigmoid(Layer):
     def backward(self, grad):
         return grad * self.__sigmoid(self.x) * (1 - self.__sigmoid(self.x))
 
+
+class ReLU(Layer):
+    def __init__(self):
+        Layer.__init__(self)
+        self.x = None
+    
+    def __call__(self, X):
+        self.x = X
+        return self.__relu(X)
+
+    def __relu(self, X):
+        return np.maximum(0, X)
+    
+    def backward(self, grad):
+        grad_x = np.array(self.x)
+        grad_x[grad_x<=0] = 0
+        grad_x[grad_x>0] = 1
+        
+        return grad_x * grad
+
 class Linear(Layer):
     def __init__(self, input_size, output_size):
         Layer.__init__(self)
@@ -138,48 +158,6 @@ def train(model, X_train, y_train, lr=1e-3):
 
 def test(model, X_test, y_test):
     return model.accuracy(X_test, y_test)
-
-if __name__ == "__main__":
-    X_train, y_train, X_test, y_test = data_loader.ex1_data(['train1_icu_data.csv'],\
-    ['train1_icu_label.csv'],\
-    ['test1_icu_data.csv'],\
-    ['test1_icu_label.csv'])
-    pca = PCA(n_components=96)
-    X_train = pca.fit_transform(X_train)
-    X_test = pca.transform(X_test)
-    # model = Neural_Network()
-
-    # epochs = 5000
-    # for epoch in range(1, epochs + 1):
-    #     l, a = train(model, X_train, y_train)
-    #     b = test(model, X_test, y_test)
-    #     print("epoch : [%d/%d]\tloss: %f\ttrain acc: %f\ttest acc: %f" % (epoch, epochs,l, a, b))
-    
-    # exit()
-    rs = ShuffleSplit(n_splits=5, test_size=0.1, random_state=0)
-    cv = 0
-    epochs = 1000
-    for train_index, test_index in rs.split(X_train):
-        cv += 1
-        model = Neural_Network()
-        for epoch in range(1, epochs + 1):
-            train_loss = 0
-            train_acc = 0
-            for index in train_index:
-                t_loss, t_acc = train(model, np.atleast_2d(X_train[index]), np.atleast_1d(y_train[index]), lr=1e-2)
-                train_loss += t_loss
-                train_acc += t_acc
-            train_loss /= len(train_index)
-            train_acc /= len(train_index)
-            print("cv:%d epoch:[%d/%d] %.2f %.4f%%" % (cv, epoch, epochs, train_loss, 100 * train_acc))
-
-            if epoch % 200 == 0:
-                test_acc = 0
-                for index in test_index:
-                    test_acc += test(model, np.atleast_2d(X_train[index]), np.atleast_1d(y_train[index]))
-                test_acc /= len(test_index)
-                print("cross-validation: %d %.4f%%" % (cv, 100 * test_acc))
-
 
 
 
