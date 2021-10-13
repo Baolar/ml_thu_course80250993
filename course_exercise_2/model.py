@@ -19,7 +19,7 @@ def nll(Y_true, Y_pred):
     return -np.mean(loglikelihoods)
 
 def softmax(X):
-    return np.exp(X) / np.sum(np.exp(X), axis=-1,keepdims=True)
+    return np.exp(X) / np.sum(np.exp(X), axis=-1, keepdims=True)
 
 class Layer:
     def __init__(self):
@@ -55,7 +55,7 @@ class ReLU(Layer):
     
     def backward(self, grad):
         grad_x = np.array(self.x)
-        grad_x[grad_x<=0] = 0
+        grad_x[grad_x<=0] = 0.1
         grad_x[grad_x>0] = 1
         
         return grad_x * grad
@@ -110,21 +110,31 @@ class Neural_Network:
     def __init__(self):
         self.linear1 = Linear(96, 32)
         self.sigmoid1 = Sigmoid()
-        self.linear2 = Linear(32, 2)
+        self.linear2 = Linear(16, 16)
+        self.sigmoid2 = Sigmoid()
+        self.linear3 = Linear(16, 2)
     
     def forward(self, X):
         X = self.linear1(X)
         X = self.sigmoid1(X)
         X = self.linear2(X)
+        X = self.sigmoid2(X)
+        X = self.linear3(X)
 
         return X
 
     def backward(self, grad):
-        grad_h = self.linear2.backward(grad)
-        grad_z_h = self.sigmoid1.backward(grad_h)
-        self.linear1.backward(grad_z_h)
+        # grad_h = self.linear2.backward(grad)
+        # grad_z_h = self.sigmoid1.backward(grad_h)
+        # self.linear1.backward(grad_z_h)
+        grad = self.linear3.backward(grad)
+        grad = self.sigmoid2.backward(grad)
+        grad = self.linear2.backward(grad)
+        grad = self.sigmoid1.backward(grad)
+        grad = self.linear1.backward(grad)
     
     def step(self, lr=1e-3):
+        self.linear3.step(lr)
         self.linear2.step(lr)
         self.linear1.step(lr)
     

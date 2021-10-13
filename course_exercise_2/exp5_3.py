@@ -12,19 +12,30 @@ class Super_Neural_Network(Neural_Network):
         Neural_Network.__init__(self)
         self.linear1 = Linear(96, 32)
         self.relu1 = ReLU()
-        self.linear2 = Linear(32, 2)
+        self.linear2 = Linear(32, 32)
+        self.relu2 = ReLU()
+        self.linear3 = Linear(32, 2)
 
     def forward(self, X):
         X = self.linear1(X)
         X = self.relu1(X)
         X = self.linear2(X)
+        X = self.relu2(X)
+        X = self.linear3(X)
 
         return X
     
     def backward(self, grad):
-        grad_h = self.linear2.backward(grad)
-        grad_z_h = self.relu1.backward(grad_h)
-        self.linear1.backward(grad_z_h)
+        grad = self.linear3.backward(grad)
+        grad = self.relu2.backward(grad)
+        grad = self.linear2.backward(grad)
+        grad = self.relu1.backward(grad)
+        grad = self.linear1.backward(grad)
+    
+    def step(self, lr=1e-3):
+        self.linear3.step(lr)
+        self.linear2.step(lr)
+        self.linear1.step(lr)
 
 if __name__ == "__main__":
     X_train, y_train, X_test, y_test = data_loader.ex1_data(['train1_icu_data.csv'],\
