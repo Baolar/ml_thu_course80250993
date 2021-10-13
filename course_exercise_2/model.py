@@ -137,7 +137,7 @@ if __name__ == "__main__":
     # exit()
     rs = ShuffleSplit(n_splits=5, test_size=0.1, random_state=0)
     cv = 0
-    epochs = 3000
+    epochs = 1000
     for train_index, test_index in rs.split(X_train):
         cv += 1
         model = Neural_Network()
