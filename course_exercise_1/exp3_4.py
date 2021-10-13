@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print(out_excel)
     with codecs.open("feature_weight.csv", "w", "utf_8_sig") as csvfile:
         writer = csv.writer(csvfile)
-        
+        writer.writerow(["升序","权重","编号","特征","unit","type","描述"])
         for row in out_excel:
             writer.writerow(row)
     

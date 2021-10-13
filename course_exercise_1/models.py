@@ -157,13 +157,13 @@ class Perceptron(Base_Model):
                 for i in train_index:
                     g = np.dot(w, X[i]) + b
                     if g * self.dict_y[y[i]] <= 0:
-                        w_gradient -= self.dict_y[y[i]] * X[i]
-                        b_gradient -= self.dict_y[y[i]]
+                        w_gradient -= self.dict_y[y[i]] * X[i] #/ len(train_index)
+                        b_gradient -= self.dict_y[y[i]] #/ len(train_index)
                         loss -= g * self.dict_y[y[i]]
                     else:
                         train_cnt += 1
 
-                loss /= len(train_index)
+                # loss /= len(train_index)
 
                 # BGD
                 if optimizer == "BGD":

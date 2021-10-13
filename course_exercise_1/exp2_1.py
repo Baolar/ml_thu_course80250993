@@ -29,7 +29,7 @@ if __name__ == "__main__":
     train_history, validation_history, loss_history = clf_fir.fit(X_train, y_train, lr=1e-2, n_iter=int(1e3), n_splits=5,optimizer="BGD")
     train_history = np.mean(train_history, axis=0)
     validation_history = np.mean(validation_history, axis=0)
-    loss_history = np.mean(loss_history, axis=0)2
+    loss_history = np.mean(loss_history, axis=0)
     
     x, y = plot_loss_curve(loss_history)
     plt.subplot(1,2,1)
@@ -46,7 +46,9 @@ if __name__ == "__main__":
     plt.subplot(1,2,2)
     plt.plot(x, y, label="Adam loss")
     plt.legend()
-    plt.show()
-
+    
     print(clf_fir.score(X_test, y_test))
     print(clf_vir.score(X_test, y_test))
+    
+    plt.show()
+
