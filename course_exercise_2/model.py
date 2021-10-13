@@ -52,6 +52,15 @@ class Linear(Layer):
         self.grad_W = None
         self.grad_b = None
 
+        # inialize for adam
+        self.m = np.zeros(self.W.shape)
+        self.v = np.zeros(self.W.shape)
+        self.m_b = np.zeros(self.b.shape)
+        self.v_b = np.zeros(self.b.shape)
+        self.beta1 = 0.9
+        self.beta2 = 0.999
+        self.eps = 1e-8
+
     def __call__(self, X):
         self.x = X
         return np.dot(X, self.W) + self.b
@@ -62,8 +71,20 @@ class Linear(Layer):
         return np.dot(grad, np.transpose(self.W))
     
     def step(self, lr=1e-3):
-        self.W -= lr * self.grad_W
-        self.b -= lr * self.grad_b
+        self.m = self.beta1 * self.m + (1 - self.beta1) * self.grad_W
+        self.v = self.beta2 * self.v + (1 - self.beta2) * self.grad_W * self.grad_W
+        m_ = self.m / (1 - self.beta1)
+        v_ = self.v / (1 - self.beta2)
+        self.W -= lr * m_ / (np.sqrt(v_) + self.eps)
+
+        self.m_b = self.beta1 * self.m_b + (1 - self.beta1) * self.grad_b
+        self.v_b = self.beta2 * self.v_b + (1 - self.beta2) * self.grad_b * self.grad_b
+        m_b_ = self.m_b / (1 - self.beta1)
+        v_b_ = self.v_b / (1 - self.beta2)
+        self.b -= lr * m_b_ / (np.sqrt(v_b_) + self.eps)
+
+        # self.W -= lr * self.grad_W
+        # self.b -= lr * self.grad_b
 
 class Neural_Network:
     def __init__(self):
@@ -145,7 +166,7 @@ if __name__ == "__main__":
             train_loss = 0
             train_acc = 0
             for index in train_index:
-                t_loss, t_acc = train(model, np.atleast_2d(X_train[index]), np.atleast_1d(y_train[index]))
+                t_loss, t_acc = train(model, np.atleast_2d(X_train[index]), np.atleast_1d(y_train[index]), lr=1e-2)
                 train_loss += t_loss
                 train_acc += t_acc
             train_loss /= len(train_index)
