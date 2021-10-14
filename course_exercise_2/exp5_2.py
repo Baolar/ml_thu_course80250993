@@ -16,7 +16,7 @@ if __name__ == "__main__":
     X_train = pca.fit_transform(X_train)
     X_test = pca.transform(X_test)
 
-    epochs = 3000
+    epochs = 1800
     model = Neural_Network()
     for epoch in range(1, epochs + 1):
         t_loss, t_acc = train(model, X_train, y_train, 1e-2)

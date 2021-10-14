@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     rs = ShuffleSplit(n_splits=5, test_size=0.1, random_state=0)
     cv = 0
-    epochs = 3000
+    epochs = 5000
 
     train_loss_history_plot = []
     train_acc_history_plot = []
