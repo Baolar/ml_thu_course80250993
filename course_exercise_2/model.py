@@ -108,7 +108,7 @@ class Linear(Layer):
 
 class Neural_Network:
     def __init__(self):
-        self.linear1 = Linear(96, 32)
+        self.linear1 = Linear(96, 16)
         self.sigmoid1 = Sigmoid()
         self.linear2 = Linear(16, 16)
         self.sigmoid2 = Sigmoid()

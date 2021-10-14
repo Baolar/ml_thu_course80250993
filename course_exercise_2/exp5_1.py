@@ -16,7 +16,7 @@ if __name__ == "__main__":
     X_train = pca.fit_transform(X_train)
     X_test = pca.transform(X_test)
 
-    rs = ShuffleSplit(n_splits=1, test_size=0.1, random_state=0)
+    rs = ShuffleSplit(n_splits=5, test_size=0.1, random_state=0)
     cv = 0
     epochs = 3000
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
             train_loss_history.append(train_loss)
             train_acc_history.append(train_acc)
 
-            if epoch % 200 == 0:
+            if epoch % 100 == 0:
                 test_acc = 0
                 for index in test_index:
                     test_acc += test(model, np.atleast_2d(X_train[index]), np.atleast_1d(y_train[index]))
@@ -66,6 +66,6 @@ if __name__ == "__main__":
     plt.legend()
     plt.subplot(2,1,2)
     plt.plot(list(range(1, 1 + len(train_acc_history_plot))), train_acc_history_plot, label="train acc")
-    plt.plot(200 *  np.array(range(1, 1 + len(test_acc_history_plot))), test_acc_history_plot, label="test acc")
+    plt.plot(100 *  np.array(range(1, 1 + len(test_acc_history_plot))), test_acc_history_plot, label="test acc")
     plt.legend()
     plt.show()
